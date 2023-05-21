@@ -26,25 +26,55 @@ const fetchData = async () => {
 
   const data = await response.json();
   localStorage.setItem("animeInfo", JSON.stringify(data));
-  console.log(`data => ${JSON.stringify(data)}`);
+  //   console.log(`data => ${JSON.stringify(data)}`);
 
-//   add();
+  add();
 };
 
 const add = () => {
-  let animeList = []; // создаем пустой список для хранения аниме
+  //   let animeList = []; // создаем пустой список для хранения аниме
 
-  for (let i = 0; i < 10; i++) {
-    // перебираем все элементы массива данных
-    let animeData = localStorage.getItem("animeInfo"); // получаем данные об одном из элементов массива
+  //   for (let i = 0; i < 10; i++) {
+  //     // перебираем все элементы массива данных
+  //     let animeData = localStorage.getItem("animeInfo"); // получаем данные об одном из элементов массива
 
-    if (animeData !== null && animeData.length > 0) {
-      // если данные есть в хранилище, то добавляем его в список
-      animeList.push(animeData); // добавляем его в список
-    } else {
-      console.log("Нет доступных аниме.");
-    }
-  }
+  //     if (animeData !== null && animeData.length > 0) {
+  //       // если данные есть в хранилище, то добавляем его в список
+  //       animeList.push(animeData); // добавляем его в список
+  //     } else {
+  //       console.log("Нет доступных аниме.");
+  //     }
+  //   }
 
-  document.getElementById("anime").innerHTML = animeList.join(", "); // объединяем все элементы списка в одну строку через запятую и пробел
+  const animeInfo = JSON.parse(localStorage.getItem("animeInfo"));
+  const result = Object.values(animeInfo);
+  result[0].map((data, index) => {
+    // const result = JSON.stringify(data.id);
+    const title = data.attributes.titles.en;
+    const description = data.attributes.description;
+    const type = data.attributes.showType;
+    const series = data.attributes.episodeCount;
+    const status = data.attributes.status;
+    const startDate = data.attributes.startDate;
+    const endDate = data.attributes.endDate;
+    const ageRating = data.attributes.ageRatingGuide;
+    const image = data.attributes.coverImage.original;
+    const url = data.attributes.slug;
+
+    let contentBlock = document.querySelector(".contentBlock");
+    let block = document.createElement("div");
+    block.className = "cardBlock";
+    let allInfo = `<img src="${image}" class="cardImage" /><p class="cardText"><b>${title}</b><br><b>type: </b> ${type}<br> <b>series: </b>${series}<br><b>status: </b>${status}<br><b>Date: </b>${startDate} — ${endDate} <br><b>Age Rating: </b>${ageRating}</p><a class="inputButton" href="https://kitsu.io/anime/${url}"><p>watch</p></a>`;
+    block.innerHTML = allInfo;
+    contentBlock.appendChild(block);
+    console.log(`${index}) ${JSON.stringify(data)}`);
+  });
+
+  //   console.log(result);
+  //   jsanime.map((data, index) => {
+  //     console.log(`data => ${data} ====== index => ${index}`);
+  //   });
+  //   console.log(`allAnimeIndo => ${allAnimeInfo}`);
+
+  //   document.getElementById("anime").innerHTML = animeList.join(", "); // объединяем все элементы списка в одну строку через запятую и пробел
 };
