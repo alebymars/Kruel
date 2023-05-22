@@ -12,11 +12,48 @@ body {
   font-family: sans-serif;
 }
 
+h2 {
+  display: flex;
+  justify-content: center;
+  margin: -10px 0 10px 0;
+  color: aliceblue;
+  width: 100%;
+  font-weight: bold;
+  text-shadow: -0 -4px 0 #7d1c20, 0 -4px 0 #7d1c20, -0 4px 0 #7d1c20,
+    0 4px 0 #7d1c20, -4px -0 0 #7d1c20, 4px -0 0 #7d1c20, -4px 0 0 #7d1c20,
+    4px 0 0 #7d1c20, -1px -4px 0 #7d1c20, 1px -4px 0 #7d1c20, -1px 4px 0 #7d1c20,
+    1px 4px 0 #7d1c20, -4px -1px 0 #7d1c20, 4px -1px 0 #7d1c20,
+    -4px 1px 0 #7d1c20, 4px 1px 0 #7d1c20, -2px -4px 0 #7d1c20,
+    2px -4px 0 #7d1c20, -2px 4px 0 #7d1c20, 2px 4px 0 #7d1c20,
+    -4px -2px 0 #7d1c20, 4px -2px 0 #7d1c20, -4px 2px 0 #7d1c20,
+    4px 2px 0 #7d1c20, -3px -4px 0 #7d1c20, 3px -4px 0 #7d1c20,
+    -3px 4px 0 #7d1c20, 3px 4px 0 #7d1c20, -4px -3px 0 #7d1c20,
+    4px -3px 0 #7d1c20, -4px 3px 0 #7d1c20, 4px 3px 0 #7d1c20,
+    -4px -4px 0 #7d1c20, 4px -4px 0 #7d1c20, -4px 4px 0 #7d1c20,
+    4px 4px 0 #7d1c20, -4px -4px 0 #7d1c20, 4px -4px 0 #7d1c20,
+    -4px 4px 0 #7d1c20, 4px 4px 0 #7d1c20;
+}
+
 h1 {
   display: flex;
   justify-content: center;
   width: 100%;
   color: aliceblue;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: -0 -4px 0 #7d1c20, 0 -4px 0 #7d1c20, -0 4px 0 #7d1c20,
+    0 4px 0 #7d1c20, -4px -0 0 #7d1c20, 4px -0 0 #7d1c20, -4px 0 0 #7d1c20,
+    4px 0 0 #7d1c20, -1px -4px 0 #7d1c20, 1px -4px 0 #7d1c20, -1px 4px 0 #7d1c20,
+    1px 4px 0 #7d1c20, -4px -1px 0 #7d1c20, 4px -1px 0 #7d1c20,
+    -4px 1px 0 #7d1c20, 4px 1px 0 #7d1c20, -2px -4px 0 #7d1c20,
+    2px -4px 0 #7d1c20, -2px 4px 0 #7d1c20, 2px 4px 0 #7d1c20,
+    -4px -2px 0 #7d1c20, 4px -2px 0 #7d1c20, -4px 2px 0 #7d1c20,
+    4px 2px 0 #7d1c20, -3px -4px 0 #7d1c20, 3px -4px 0 #7d1c20,
+    -3px 4px 0 #7d1c20, 3px 4px 0 #7d1c20, -4px -3px 0 #7d1c20,
+    4px -3px 0 #7d1c20, -4px 3px 0 #7d1c20, 4px 3px 0 #7d1c20,
+    -4px -4px 0 #7d1c20, 4px -4px 0 #7d1c20, -4px 4px 0 #7d1c20,
+    4px 4px 0 #7d1c20, -4px -4px 0 #7d1c20, 4px -4px 0 #7d1c20,
+    -4px 4px 0 #7d1c20, 4px 4px 0 #7d1c20;
 }
 
 .mainBlockInfo {
