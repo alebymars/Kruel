@@ -7,6 +7,7 @@ body {
 
 * {
   outline: 0 !important;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -26,13 +27,17 @@ h1 {
 .searchDivForm {
   display: flex;
   gap: 10px;
+  /* background-color: #7d1c20; */
+  width: 100%;
+  max-width: 450px;
 }
 
 .inputSearch {
   padding: 10px;
   border-radius: 10px;
   border-width: 0;
-  min-width: 250px;
+  width: 100%;
+  /* min-width: 250px; */
 }
 
 .inputButtonForm {
@@ -74,11 +79,13 @@ h1 {
   padding: 10px;
   background-color: aliceblue;
   border-radius: 10px;
+  width: 95%;
+  /* min-width: 500px; */
   /* max-width: 1000px; */
   /* max-width: 550px; */
   /* overflow: hidden; */
   gap: 10px;
-  flex-direction: row;
+  /* flex-direction: row; */
   /* max-width: 550px; */
   flex-wrap: wrap;
   justify-content: space-between;
@@ -88,17 +95,27 @@ h1 {
   display: flex;
   flex-direction: column;
   background-color: bisque;
-  width: 200px;
-  min-width: 150px;
+  width: 46%;
+  max-width: 600px;
+  /* min-width: 150px; */
+  /* width: 300px; */
+  /* min-width: 150px; */
   /* align-items: center; */
   border-radius: 10px;
   margin: 10px 5px;
   height: fit-content;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+.plugCard {
+  width: 100%;
+  text-align: center;
+  /* background-color: #7d1c20; */
 }
 
 .cardImage {
-  width: 250px;
+  /* width: 250px; */
+  /* max-width: 350px; */
   height: 250px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
@@ -110,6 +127,35 @@ h1 {
   font-size: 17px;
   padding: 10px;
   margin: 0;
-  max-width: 150px;
-  font-family: sans-serif;
+  /* max-width: 150px; */
+}
+
+.cardDescription {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  box-orient: vertical;
+}
+
+@media screen and (max-width: 460px) {
+  .cardBlock {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .cardBlock {
+    width: 31%;
+  }
+
+  /* .inputSearch {
+    width: 50%;
+  } */
 }

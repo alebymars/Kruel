@@ -1,4 +1,8 @@
 const fetchData = async () => {
+  const contentBlock = document.querySelector(".contentBlock");
+  const cb = document.getElementById("cardBlock");
+  //   contentBlock.removeChild(cb);
+
   let userText = document.getElementById("searchText").value;
   const response = await await fetch(
     `https://kitsu.io/api/edge/anime?filter[text]=${userText}`,
@@ -32,24 +36,38 @@ const fetchData = async () => {
 };
 
 const add = () => {
-  //   let animeList = []; // создаем пустой список для хранения аниме
-
-  //   for (let i = 0; i < 10; i++) {
-  //     // перебираем все элементы массива данных
-  //     let animeData = localStorage.getItem("animeInfo"); // получаем данные об одном из элементов массива
-
-  //     if (animeData !== null && animeData.length > 0) {
-  //       // если данные есть в хранилище, то добавляем его в список
-  //       animeList.push(animeData); // добавляем его в список
-  //     } else {
-  //       console.log("Нет доступных аниме.");
-  //     }
-  //   }
-
   const animeInfo = JSON.parse(localStorage.getItem("animeInfo"));
   const result = Object.values(animeInfo);
-  result[0].map((data, index) => {
-    // const result = JSON.stringify(data.id);
+
+  let contentBlock = document.querySelector(".contentBlock");
+  //   contentBlock.removeChild(cb);
+  const cb = document.getElementById("cardBlock");
+  const pc = document.getElementById("plugCard");
+  // console.log("До", typeof pc);
+  // if (typeof pc == Object) {
+  //   contentBlock.removeChild(pc);
+  // }
+
+  if (document.getElementById("plugCard") !== null) {
+    contentBlock.removeChild(pc);
+  }
+
+  if (document.getElementById("cardBlock") !== null) {
+    const parentElement = document.getElementById("contentBlock");
+    parentElement.innerHTML = "";
+
+    // while (cb.firstChild) {
+    //   cb.removeChild(cb.firstChild);
+    // }
+  }
+
+  // console.log("После", typeof pc);
+  //   console.log(Object.keys(animeInfo.data).length);
+  //   if (Object.keys(animeInfo).length) {
+  //     contentBlock.removeChild(cb);
+  //   }
+
+  result[0].map((data) => {
     const title = data.attributes.titles.en;
     const description = data.attributes.description;
     const type = data.attributes.showType;
@@ -58,23 +76,22 @@ const add = () => {
     const startDate = data.attributes.startDate;
     const endDate = data.attributes.endDate;
     const ageRating = data.attributes.ageRatingGuide;
-    const image = data.attributes.coverImage.original;
+    const image =
+      data.attributes.coverImage.original ||
+      data.attributes.posterImage.original;
     const url = data.attributes.slug;
 
-    let contentBlock = document.querySelector(".contentBlock");
     let block = document.createElement("div");
     block.className = "cardBlock";
-    let allInfo = `<img src="${image}" class="cardImage" /><p class="cardText"><b>${title}</b><br><b>type: </b> ${type}<br> <b>series: </b>${series}<br><b>status: </b>${status}<br><b>Date: </b>${startDate} — ${endDate} <br><b>Age Rating: </b>${ageRating}</p><a class="inputButton" href="https://kitsu.io/anime/${url}"><p>watch</p></a>`;
+    block.id = "cardBlock";
+    let allInfo = `<img src="${image}" class="cardImage" /><p class="cardText"><b>${
+      title ? title : "Название отсутствует."
+    }</b><br><b>Описание: <b class="cardDescription">${description}</b></b><b>Тип: </b> ${type}<br> <b>Серий: </b>${series}<br><b>Статус: </b>${status}<br><b>Начало/Конец: </b>${startDate} — ${endDate} <br><b>Возрастной рейтинг: </b>${ageRating}</p><a class="inputButton" href="https://kitsu.io/anime/${url}"><p>смотреть</p></a>`;
     block.innerHTML = allInfo;
     contentBlock.appendChild(block);
-    console.log(`${index}) ${JSON.stringify(data)}`);
+    // console.log(`${index}) ${JSON.stringify(data)}`);
+    localStorage.clear();
+
+    console.log("LS после clear()", localStorage.getItem("animeInfo"));
   });
-
-  //   console.log(result);
-  //   jsanime.map((data, index) => {
-  //     console.log(`data => ${data} ====== index => ${index}`);
-  //   });
-  //   console.log(`allAnimeIndo => ${allAnimeInfo}`);
-
-  //   document.getElementById("anime").innerHTML = animeList.join(", "); // объединяем все элементы списка в одну строку через запятую и пробел
 };
