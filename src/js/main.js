@@ -95,7 +95,7 @@ const add = () => {
       block.id = "cardBlock";
       let allInfo = `<img src="${image}" class="cardImage" /><p class="cardText"><b>${
         title ? title : "Название отсутствует."
-      }</b><br><b>Описание: <b class="cardDescription">${description}</b></b><b>Тип: </b> ${type}<br> <b>Серий: </b>${series}<br><b>Статус: </b>${status}<br><b>Начало/Конец: </b>${startDate} — ${endDate} <br><b>Возрастной рейтинг: </b>${ageRating}</p><a class="inputButton" href="https://kitsu.io/anime/${url}"><p>смотреть</p></a>`;
+      }</b><br><b>Описание: <b class="cardDescription">${description}</b></b><b>Тип: </b> ${type}<br> <b>Серий: </b>${series}<br><b>Статус: </b>${status}<br><b>Начало/Конец: </b>${startDate} — ${endDate} <br><b>Возрастной рейтинг: </b>${ageRating}</p><a target="_blank" class="inputButton" href="https://kitsu.io/anime/${url}"><p>смотреть</p></a>`;
       block.innerHTML = allInfo;
       contentBlock.appendChild(block);
       // console.log(`${index}) ${JSON.stringify(data)}`);
