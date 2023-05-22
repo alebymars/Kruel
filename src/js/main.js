@@ -67,6 +67,16 @@ const add = () => {
   //     contentBlock.removeChild(cb);
   //   }
 
+  if (result[0].length < 1) {
+    let emptyResponse = document.createElement("div");
+    emptyResponse.className = "plugCard";
+    emptyResponse.id = "plugCard";
+    emptyResponse.innerHTML =
+      "<p>Это пустой запрос, попробуй что-то другое :)</p>";
+    contentBlock.appendChild(emptyResponse);
+    console.log("empty");
+  }
+
   result &&
     result[0].map((data) => {
       const title = data.attributes.titles.en;

@@ -3,7 +3,7 @@ body {
   background: center/cover url("../img/bg.jpg");
   flex-direction: column;
   justify-content: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 * {

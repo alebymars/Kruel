@@ -1,7 +1,9 @@
 body {
-  /* display: flex; */
-  background-color: aquamarine;
+  display: flex;
+  /* background-color: rgba(0, 0, 0, 0.349); */
+  background: center/cover url("../img/bg.jpg");
   flex-direction: column;
+  height: 100vh;
   /* width: 100vw; */
 }
 
@@ -14,6 +16,7 @@ h1 {
   display: flex;
   justify-content: center;
   width: 100%;
+  color: aliceblue;
 }
 
 .mainBlockInfo {
