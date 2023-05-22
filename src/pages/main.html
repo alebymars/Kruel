@@ -20,6 +20,13 @@
             <input id="searchText" class="inputSearch" type="search" placeholder="Naruto Shipuden" />
             <input id="searchButton" class="inputButtonForm" type="button" value="Поиск" onclick="fetchData()" />
         </div>
+        <br>
+        <div class="filterDivCards">
+            <p class="filterText">Фильтры: </p>
+            <input id="hideTv" class="inputButtonFilter" type="button" value="TV" onclick="toggleTVBlocks()" />
+            <input id="hideTv" class="inputButtonFilter" type="button" value="image is not null"
+                onclick="toggleEmptyBlocks()" />
+        </div>
 
         <div id="contentBlock" class="contentBlock">
             <div id="plugCard" class="plugCard">

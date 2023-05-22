@@ -104,3 +104,40 @@ const add = () => {
   localStorage.clear();
   // console.log("LS после clear()", localStorage.getItem("animeInfo"));
 };
+
+const toggleTVBlocks = () => {
+  let cardBlocks = document.querySelectorAll(".cardBlock");
+  for (let i = 0; i < cardBlocks.length; i++) {
+    let children = cardBlocks[i].childNodes;
+    for (let j = 0; j < children.length; j++) {
+      if (children[j].textContent.includes("TV")) {
+        if (cardBlocks[i].style.display === "none") {
+          cardBlocks[i].style.display = "flex";
+        } else {
+          cardBlocks[i].style.display = "none";
+        }
+        break;
+      }
+    }
+  }
+};
+
+const toggleEmptyBlocks = () => {
+  let cardBlocks = document.querySelectorAll(".cardBlock");
+  for (let i = 0; i < cardBlocks.length; i++) {
+    let children = cardBlocks[i].childNodes;
+    for (let j = 0; j < children.length; j++) {
+      if (
+        children[j].tagName === "IMG" &&
+        children[j].src.includes("empty.png")
+      ) {
+        if (cardBlocks[i].style.display === "none") {
+          cardBlocks[i].style.display = "flex";
+        } else {
+          cardBlocks[i].style.display = "none";
+        }
+        break;
+      }
+    }
+  }
+};
