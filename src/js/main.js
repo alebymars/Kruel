@@ -67,31 +67,30 @@ const add = () => {
   //     contentBlock.removeChild(cb);
   //   }
 
-  result[0].map((data) => {
-    const title = data.attributes.titles.en;
-    const description = data.attributes.description;
-    const type = data.attributes.showType;
-    const series = data.attributes.episodeCount;
-    const status = data.attributes.status;
-    const startDate = data.attributes.startDate;
-    const endDate = data.attributes.endDate;
-    const ageRating = data.attributes.ageRatingGuide;
-    const image =
-      data.attributes.coverImage.original ||
-      data.attributes.posterImage.original;
-    const url = data.attributes.slug;
+  result &&
+    result[0].map((data) => {
+      const title = data.attributes.titles.en;
+      const description = data.attributes.description;
+      const type = data.attributes.showType;
+      const series = data.attributes.episodeCount;
+      const status = data.attributes.status;
+      const startDate = data.attributes.startDate;
+      const endDate = data.attributes.endDate;
+      const ageRating = data.attributes.ageRatingGuide;
+      let image = data?.attributes?.coverImage?.original || "../img/empty.png";
+      const url = data.attributes.slug;
 
-    let block = document.createElement("div");
-    block.className = "cardBlock";
-    block.id = "cardBlock";
-    let allInfo = `<img src="${image}" class="cardImage" /><p class="cardText"><b>${
-      title ? title : "Название отсутствует."
-    }</b><br><b>Описание: <b class="cardDescription">${description}</b></b><b>Тип: </b> ${type}<br> <b>Серий: </b>${series}<br><b>Статус: </b>${status}<br><b>Начало/Конец: </b>${startDate} — ${endDate} <br><b>Возрастной рейтинг: </b>${ageRating}</p><a class="inputButton" href="https://kitsu.io/anime/${url}"><p>смотреть</p></a>`;
-    block.innerHTML = allInfo;
-    contentBlock.appendChild(block);
-    // console.log(`${index}) ${JSON.stringify(data)}`);
-    localStorage.clear();
+      let block = document.createElement("div");
+      block.className = "cardBlock";
+      block.id = "cardBlock";
+      let allInfo = `<img src="${image}" class="cardImage" /><p class="cardText"><b>${
+        title ? title : "Название отсутствует."
+      }</b><br><b>Описание: <b class="cardDescription">${description}</b></b><b>Тип: </b> ${type}<br> <b>Серий: </b>${series}<br><b>Статус: </b>${status}<br><b>Начало/Конец: </b>${startDate} — ${endDate} <br><b>Возрастной рейтинг: </b>${ageRating}</p><a class="inputButton" href="https://kitsu.io/anime/${url}"><p>смотреть</p></a>`;
+      block.innerHTML = allInfo;
+      contentBlock.appendChild(block);
+      // console.log(`${index}) ${JSON.stringify(data)}`);
+    });
 
-    console.log("LS после clear()", localStorage.getItem("animeInfo"));
-  });
+  localStorage.clear();
+  // console.log("LS после clear()", localStorage.getItem("animeInfo"));
 };
