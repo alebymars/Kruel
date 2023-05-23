@@ -43,9 +43,15 @@ body {
 
 .inputField {
   padding: 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border-color: #aa3037;
   border-width: 2px;
+  background: rgba(255, 255, 255, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.3px);
+  -webkit-backdrop-filter: blur(13.3px);
+  border: 1px solid rgba(255, 255, 255, 0.52);
 }
 
 .buttonLogin {
@@ -53,6 +59,7 @@ body {
   padding: 10px 20px;
   border-radius: 10px;
   color: aliceblue;
+  font-weight: 700;
 }
 
 .buttonLogin:hover {
@@ -60,8 +67,10 @@ body {
 }
 
 .authText {
-  color: #aa3037 !important;
+  /* color: #aa3037 !important; */
   font-size: 25px;
   font-weight: 700;
-  /* text-shadow: 1px 1px 1px #ffffff6e; */
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgb(182, 58, 58), 0 0 1em rgb(165, 57, 57),
+    0 0 0.2em rgb(255, 0, 0);
 }
