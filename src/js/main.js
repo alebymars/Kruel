@@ -72,7 +72,7 @@ const add = () => {
     emptyResponse.className = "plugCard";
     emptyResponse.id = "plugCard";
     emptyResponse.innerHTML =
-      "<p>Это некорректный запрос, попробуй что-то другое :)</p>";
+      "<p class='plugText'>Это некорректный запрос, попробуй что-то другое :)</p>";
     contentBlock.appendChild(emptyResponse);
     console.log("empty");
   }
