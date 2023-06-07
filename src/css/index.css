@@ -17,10 +17,10 @@ body {
 h2 {
   display: flex;
   justify-content: center;
-  padding: -10px 0 10px 0;
+  padding: 10px 0 20px 0;
   color: aliceblue;
   width: 100%;
-  margin: 0 20px 30px 20px;
+  /* margin: 0 20px 30px 20px; */
   font-weight: bold;
   text-shadow: 1px 1px 2px rgb(182, 58, 58), 0 0 1em rgb(165, 57, 57),
     0 0 0.2em rgb(255, 0, 0);
@@ -52,10 +52,11 @@ h1 {
 
 .rightBlock {
   display: flex;
-  flex-basis: 40%;
+  /* flex-basis: 40%; */
   /* background: linear-gradient(#ffd1d1, #eb7f7f); */
   /* border-radius: 10px; */
-  height: 200px;
+  /* height: 200px; */
+  padding: 20px 0 20px 0;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -96,7 +97,7 @@ h1 {
   background-color: #7d1c20;
 }
 
-.authText {
+.usernameText {
   /* color: #aa3037 !important; */
   font-size: 25px;
   font-weight: 700;
@@ -107,7 +108,7 @@ h1 {
 
 .header {
   display: flex;
-  background-color: #aa30365f;
+  background-color: #0000000e;
   position: absolute;
   top: 0;
   width: 100%;
@@ -281,14 +282,14 @@ h1 {
   box-orient: vertical;
 }
 
-.footer {
+/* .footer {
   display: flex;
   position: absolute;
   bottom: 0;
   height: 50px;
   background-color: #7d1c20;
   width: 100%;
-}
+} */
 
 .filterDivCards {
   display: flex;
