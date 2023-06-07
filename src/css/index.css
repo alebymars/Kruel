@@ -2,13 +2,16 @@ body {
   display: flex;
   background: center/cover url("../img/bg.jpg");
   flex-direction: column;
+  justify-content: center;
+  /* height: 100vh; */
   min-height: 100vh;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 * {
   outline: 0 !important;
   font-family: sans-serif;
+  margin: 0;
 }
 
 h2 {
@@ -32,6 +35,88 @@ h1 {
   color: #ffffff;
   text-shadow: 1px 1px 2px rgb(182, 58, 58), 0 0 1em rgb(165, 57, 57),
     0 0 0.2em rgb(255, 0, 0);
+  padding-top: 60px;
+}
+
+.mainBlock {
+  display: flex;
+  padding: 0 50px;
+}
+
+.leftBlock {
+  display: flex;
+  flex-basis: 60%;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px 0 0 10px;
+}
+
+.rightBlock {
+  display: flex;
+  flex-basis: 40%;
+  /* background: linear-gradient(#ffd1d1, #eb7f7f); */
+  /* border-radius: 10px; */
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 360px;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.inputField {
+  padding: 10px;
+  width: 70%;
+  border-radius: 10px;
+  border-color: #aa3037;
+  border-width: 2px;
+  background: rgba(255, 255, 255, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13.3px);
+  -webkit-backdrop-filter: blur(13.3px);
+  border: 1px solid rgba(255, 255, 255, 0.52);
+}
+
+.buttonLogin {
+  background-color: #aa3037;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: aliceblue;
+  font-weight: 700;
+  border: 0;
+}
+
+.buttonLogin:hover {
+  background-color: #7d1c20;
+}
+
+.authText {
+  /* color: #aa3037 !important; */
+  font-size: 25px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgb(182, 58, 58), 0 0 1em rgb(165, 57, 57),
+    0 0 0.2em rgb(255, 0, 0);
+}
+
+.header {
+  display: flex;
+  background-color: #aa30365f;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(9px);
+  color: #ffffff;
 }
 
 .mainBlockInfo {
@@ -241,8 +326,4 @@ h1 {
   .cardBlock {
     width: 31%;
   }
-
-  /* .inputSearch {
-    width: 50%;
-  } */
 }

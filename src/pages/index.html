@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГЛАВНАЯ</title>
+    <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="../js/index.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <p id="headerText">Привет, username!</p>
+    </div>
+    <div id="mainBlock" class="mainBlock">
+        <div class="leftBlock">
+        </div>
+        <!-- разделяем на две части, левая пустая -->
+        <div class="rightBlock">
+            <p class="authText">
+                Введите свое имя:
+            </p>
+            <input id="username" class="inputField" value="Ivan" type="text" />
+            <button class="buttonLogin" onclick="handleNext()">Далее</button>
+        </div>
+    </div>
+</body>
+
+</html>
