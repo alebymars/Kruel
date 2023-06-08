@@ -118,6 +118,8 @@ h1 {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(9px);
   color: #ffffff;
+  font-weight: 700;
+  font-size: large;
 }
 
 .mainBlockInfo {
@@ -142,6 +144,7 @@ h1 {
   border-radius: 10px;
   border-width: 0;
   width: 100%;
+  font-size: 15px;
   /* min-width: 250px; */
 }
 
@@ -160,8 +163,9 @@ h1 {
 
 .inputButton {
   display: flex;
-  padding: 5px 15px;
+  padding: 10px 15px;
   border-radius: 10px;
+  font-size: 17px;
   border-width: 0;
   max-height: 25px;
   align-items: center;
@@ -172,6 +176,28 @@ h1 {
   font-weight: 600;
   text-shadow: 1px 1px 2px rgb(182, 58, 58), 0 0 1em rgb(165, 57, 57),
     0 0 0.2em rgb(255, 0, 0);
+}
+
+.activeInputButtonFilter {
+  display: flex;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border-width: 0;
+  max-height: 25px;
+  align-items: center;
+  background-color: #30aa3c;
+  color: aliceblue;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 600;
+  backdrop-filter: blur(13.3px);
+  -webkit-backdrop-filter: blur(13.3px);
+  border: 1px solid rgba(255, 255, 255, 0.52);
+}
+
+.activeInputButtonFilter:hover {
+  background-color: #308d39;
+  cursor: pointer;
 }
 
 .inputButtonFilter {
@@ -186,6 +212,9 @@ h1 {
   justify-content: center;
   text-decoration: none;
   font-weight: 600;
+  backdrop-filter: blur(13.3px);
+  -webkit-backdrop-filter: blur(13.3px);
+  border: 1px solid rgba(255, 255, 255, 0.52);
 }
 
 .inputButton:hover {
@@ -232,7 +261,7 @@ h1 {
 .cardBlock {
   display: flex;
   flex-direction: column;
-  background-color: bisque;
+  background-color: rgb(255, 255, 255);
   width: 46%;
   max-width: 600px;
   /* min-width: 150px; */
@@ -298,7 +327,12 @@ h1 {
   /* background-color: #b96064; */
   width: 50%;
   margin: 20px 0 0 0;
+  padding: 10px;
+  border-radius: 10px;
   justify-content: center;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .filterText {
