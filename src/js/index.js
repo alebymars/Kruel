@@ -1,5 +1,3 @@
-// import { newInfoPage } from "./modules/newInfoPage";
-
 const handleNext = () => {
   const username = document.getElementById("username").value;
 
@@ -19,18 +17,3 @@ const removeMainBlock = () => {
   const mainBlock = document.getElementById("mainBlock");
   document.body.removeChild(mainBlock);
 };
-
-const addLoader = () => {
-  // <div class="loadingBg">
-  //       <div class="loader"></div>
-  //   </div>
-  const loadingBg = document.createElement("div");
-  loadingBg.className = "loadingBg";
-  const loader = document.createElement("div");
-  loader.className = "loader";
-
-  document.body.appendChild(loadingBg);
-  document.loadingBg.appendChild(loader);
-};
-
-addLoader();

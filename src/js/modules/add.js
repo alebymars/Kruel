@@ -3,7 +3,7 @@ const add = () => {
   const result = Object.values(animeInfo);
 
   let contentBlock = document.querySelector(".contentBlock");
-  const cb = document.getElementById("cardBlock");
+  // const cb = document.getElementById("cardBlock");
   const pc = document.getElementById("plugCard");
 
   if (document.getElementById("plugCard") !== null) {

@@ -1,4 +1,5 @@
 .loadingBg {
+  display: none;
   position: absolute;
   top: 40%;
   left: 45%;
@@ -7,6 +8,7 @@
   backdrop-filter: blur(13.3px);
   -webkit-backdrop-filter: blur(13.3px);
   border: 1px solid rgba(255, 255, 255, 0.52);
+  z-index: 9999;
 }
 
 .loader {

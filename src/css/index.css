@@ -72,6 +72,9 @@ h1 {
 
 .inputField {
   padding: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  font-weight: 600;
   width: 70%;
   border-radius: 10px;
   border-color: #aa3037;
@@ -95,6 +98,7 @@ h1 {
 
 .buttonLogin:hover {
   background-color: #7d1c20;
+  cursor: pointer;
 }
 
 .usernameText {
@@ -164,7 +168,7 @@ h1 {
 .inputButton {
   display: flex;
   padding: 10px 15px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 17px;
   border-width: 0;
   max-height: 25px;
@@ -232,21 +236,21 @@ h1 {
 .contentBlock {
   display: flex;
   margin: 30px 20px;
-  padding: 10px;
+  padding: 1rem;
   /* background-color: aliceblue; */
   /* border-radius: 10px; */
-  width: 95%;
+  width: 90%;
   /* min-width: 500px; */
   /* max-width: 1000px; */
   /* max-width: 550px; */
   overflow: hidden;
-  gap: 10px;
+  /* gap: 10px; */
+  row-gap: 1rem;
+  column-gap: 1rem;
   /* flex-direction: row; */
   /* max-width: 550px; */
   flex-wrap: wrap;
   justify-content: space-between;
-  /* стекло */
-  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.14);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -260,7 +264,7 @@ h1 {
   flex-direction: column;
   background-color: rgb(255, 255, 255);
   width: 46%;
-  max-width: 600px;
+  /* max-width: 600px; */
   /* min-width: 150px; */
   /* width: 300px; */
   /* min-width: 150px; */
@@ -270,6 +274,8 @@ h1 {
   /* height: fit-content; */
   justify-content: space-between;
   /* overflow: hidden; */
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .plugCard {
