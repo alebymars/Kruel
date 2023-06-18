@@ -180,9 +180,9 @@ h1 {
 
 .activeInputButtonFilter {
   display: flex;
-  padding: 5px 15px;
+  padding: 0 15px;
+  height: 30px;
   border-radius: 10px;
-  border-width: 0;
   max-height: 25px;
   align-items: center;
   background-color: #30aa3c;
@@ -190,8 +190,6 @@ h1 {
   justify-content: center;
   text-decoration: none;
   font-weight: 600;
-  backdrop-filter: blur(13.3px);
-  -webkit-backdrop-filter: blur(13.3px);
   border: 1px solid rgba(255, 255, 255, 0.52);
 }
 
@@ -202,7 +200,8 @@ h1 {
 
 .inputButtonFilter {
   display: flex;
-  padding: 5px 15px;
+  padding: 0 15px;
+  height: 30px;
   border-radius: 10px;
   border-width: 0;
   max-height: 25px;
@@ -212,8 +211,6 @@ h1 {
   justify-content: center;
   text-decoration: none;
   font-weight: 600;
-  backdrop-filter: blur(13.3px);
-  -webkit-backdrop-filter: blur(13.3px);
   border: 1px solid rgba(255, 255, 255, 0.52);
 }
 
