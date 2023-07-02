@@ -3,7 +3,7 @@ const newInfoPage = () => {
     <div class="searchDivForm">
             <input id="searchText" class="inputSearch" type="search" placeholder="Naruto Shipuden" />
             <input id="searchButton" class="inputButtonForm" type="button" value="Поиск" onclick="fetchData()" />
-            <input id="searchButton" class="inputButtonForm" type="button" value="Reset" onclick="location.reload()" />
+            <input id="searchButton" class="inputButtonForm" type="button" value="Выйти" onclick="location.reload()" />
         </div>
         <br>
         <div class="filterDivCards">
